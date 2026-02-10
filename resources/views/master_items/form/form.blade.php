@@ -1,6 +1,10 @@
 <form method="POST" enctype="multipart/form-data">
     @csrf
 
+    <input type="file" name="foto" class="form-control mb-2" accept="image/*">
+
+    @if($method == 'edit')
+
     @if($item->foto)
     <img src="{{ asset('storage/'.$item->foto) }}" width="80">
     @else
@@ -8,9 +12,6 @@
     @endif
 
 
-    <input type="file" name="foto" class="form-control mb-2" accept="image/*">
-
-    @if($method == 'edit')
     <div class="form-group">
         <label>Kode Barang</label>
         <input type="text" class="form-control" name="kode_barang" required readonly value="{{$item->kode ?? ''}}">
