@@ -49,12 +49,15 @@
         </tbody>
     </table>
 
+    @php
+    use Carbon\Carbon;
+    Carbon::setLocale('id');
+    @endphp
+
 
     {{-- FOOTER --}}
     <div class="footer">
-        Dicetak pada: {{ now()->translatedFormat('d F Y H:i') }} WIB
-
-
+        Dicetak pada: {{ now()->setTimezone('Asia/Jakarta')->translatedFormat('d F Y H:i') }} WIB
     </div>
 
 </body>
