@@ -10,6 +10,13 @@
             <div class="card">
                 <div class="card-header">Master Item</div>
 
+                @if($data->foto)
+                <img src="{{ asset('storage/'.$data->foto) }}" width="80">
+                @else
+                <img src="{{ asset('images/no-image.png') }}" width="80">
+                @endif
+
+
                 <div class="card-body">
                     <table>
                         <tr>
@@ -41,6 +48,11 @@
                             <th>Jenis</th>
                             <td>:</td>
                             <td>{{$data->jenis}}</td>
+                        </tr>
+                        <tr>
+                            <th>Kategori</th>
+                            <td>:</td>
+                            <td>{{$data->kategoriItem->nama}}</td>
                         </tr>
                     </table>
                     <a class="btn btn-info" href="{{url('master-items/form/edit')}}/{{$data->id}}">Edit</a>

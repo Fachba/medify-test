@@ -1,19 +1,10 @@
 
 
-<a href="{{ url('master-item/export-excel') }}"
-   class="btn btn-success mb-2">
-   Download Excel
-</a>
-
 <table id="table" class="table table-striped" style="width:100%">
     <thead>
         <tr>
             <th>Kode</th>
             <th>Nama</th>
-            <th>Jenis</th>
-            <th>Harga Beli</th>
-            <th>Harga Jual</th>
-            <th>Supplier</th>
             <th>View</th>
         </tr>
     </thead>
